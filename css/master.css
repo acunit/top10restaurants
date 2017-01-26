@@ -1,0 +1,60 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.page_title, footer {
+  flex: 1 100%;
+}
+
+.bios {
+  background-color: #ccc;
+}
+
+.top-dishes {
+  background-color: #666;
+}
+
+.bios {
+  padding: 40px 20px;
+}
+
+footer {
+  background-color: #333;
+  height: 20px;
+  padding: 30px 0;
+}
+
+.a-top-dish, .top-ten, .b-top-dish {
+  padding: 40px 20px;
+}
+
+@media all and (min-width: 600px) {
+  .a-top-dish, .top-ten, .b-top-dish {
+    flex: 25.333%;
+  }
+  .andrew, .ben {
+    flex: 40%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .page_title {order: 0}
+  .andrew {
+    order: 1}
+  .a-top-dish {
+    flex: 100%;
+    order: 2}
+  .ben {
+    order: 3}
+  .b-top-dish {
+    flex: 100%;
+    order: 4}
+  .top-ten {
+    background-color: #ccc;
+    flex: 100%;
+    order: 5}
+  footer {order: 6}
+}
